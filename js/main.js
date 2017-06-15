@@ -3,7 +3,7 @@ var cargarPagina = function(){
   cargarTemas();
   $("#nuevoTema").submit(crearTema);
   $("#buscar").submit(buscarTema);
-  $(document).on("click",$(".topic"), irVerTopic);
+  $(document).on("click",".topic", irVerTopic);
 };
 var cargarTemas = function(){
   var urlTemas= url;
@@ -53,7 +53,7 @@ var filtrar = function (arreglo){
   var temasFiltrados = arreglo.filter(function(topic){
     return topic.content.toLowerCase().indexOf(aBuscar) >= 0;
 	});
-console.log("temasFiltrados",temasFiltrados)
+console.log("temasFiltrados",temasFiltrados);
 };
 
 var crearTema = function(e){
