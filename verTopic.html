@@ -1,0 +1,58 @@
+<!-- Mostrar en este HTML las respuestas de cada topic -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Foro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+<!-- titulo tema -->
+    <section id="tema"></section>
+<!-- boton para responder -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Responder
+    </button>
+<!-- seccion de respuestas -->
+    <section id="respuestas">
+      <hr>
+    </section>
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Crear Respuesta</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" id="nuevoComentario">
+              <div class="form-group">
+                <label for="respuesta" class="col-sm-2 control-label">Comentario</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" id="respuesta"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="autor" class="col-sm-2 control-label">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="autor">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+     <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/verTopic.js"></script>
+  </body>
+</html>
